@@ -77,7 +77,6 @@ def copy_file(file_name, file_name_1):
     copy_list = read_file(file_name)
     copy_list_1 = read_file(file_name_1)
     if search <= len(copy_list):
-        #copy_list_1.insert(len(copy_list_1) - 1, copy_list[search - 1])
         copy_list_1.append(copy_list[search - 1])
         standart_write(file_name_1, copy_list_1)
     else:
