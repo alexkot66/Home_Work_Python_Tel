@@ -73,8 +73,15 @@ def standart_write(file_name, res):
             f_w.writerows(res)
 
 def copy_file(file_name, file_name_1):
+    search = int(input('Введите номер строки для добавления в другой файл: '))
     copy_list = read_file(file_name)
-    standart_write(file_name_1, copy_list)
+    copy_list_1 = read_file(file_name_1)
+    if search <= len(copy_list):
+        #copy_list_1.insert(len(copy_list_1) - 1, copy_list[search - 1])
+        copy_list_1.append(copy_list[search - 1])
+        standart_write(file_name_1, copy_list_1)
+    else:
+        print('Введен неверный номер строки')
 
 
 
